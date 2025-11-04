@@ -40,7 +40,7 @@ A high-level description of what this project does, and how it does it.
 ... and so forth
 
 ## Sources Used
-1. source one
-2. source two
-3. source three
-... and so forth
+1. https://tldp.org/LDP/lkmpg/2.6/html/x569.html
+2. https://manpages.debian.org/testing/linux-manual-4.8/__class_create.9.en.html
+3. https://drive.google.com/drive/folders/12ovK0g7jol_DXe6Sp07_r7mXolHCNrAy
+4. https://stackoverflow.com/questions/8697300/how-to-create-a-device-in-dev-automatically-upon-loading-of-the-kernel-module-f

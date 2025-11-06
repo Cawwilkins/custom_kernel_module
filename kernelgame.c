@@ -11,15 +11,16 @@
 #include <linux/random.h>
 
 static int major;
-static struct class c_dev;
-static struct dev_t dev;
+static struct class *cl;
 
-void read_file() {
+ssize_t read_file(file *filep, char *buffer, size_t len, loff_t *offset) {
 	// Where we will read the file
+	fprintf(copy_to_user(buffer, filep, len));
 }
 
-void write_file() {
+ssize_t write_file(file *filep, char *buffer, size_t len, loff_t *offset) {
 	// where we will write the file
+	printk(copy_from_user(filep, buffer, len));
 }
 
 /**
@@ -29,8 +30,8 @@ void write_file() {
  *        initially, this is not done for you.
  */
 static struct file_operations char_driver_ops = {
-  .read   = read_file();
-  .write  = write_file();
+  .read   = read_file,
+  .write  = write_file
 };
 
 // You only need to modify the name here.
@@ -52,8 +53,8 @@ static int __init kernel_game_init(void) {
 	printk(KERN_INFO "TicTacToe loaded.\n");
 	// Register and store major number
 	major = register_chrdev(0, "tictactoe", &char_driver_ops);
-	cl = class_create(kernel_game_driver, "tictactoe");
-	device_create(cl, NULL, dev, NULL, "d");
+	cl = class_create(THIS_MODULE, "tictactoe");
+	device_create(cl, NULL, major, NULL, "tiktactoe");
 
 	return register_filesystem(&kernel_game_driver);
 }
@@ -66,6 +67,8 @@ static int __init kernel_game_init(void) {
 static void __exit kernel_game_exit(void) {
 
   	// -- cleanup memory --
+	device_destroy(cl, major);
+	class_destroy(cl);
 	unregister_chrdev(major, "tictactoe");
   	// -- unregister your device driver here --
 	printk(KERN_INFO "Exiting");

@@ -44,3 +44,6 @@ A high-level description of what this project does, and how it does it.
 2. https://manpages.debian.org/testing/linux-manual-4.8/__class_create.9.en.html
 3. https://drive.google.com/drive/folders/12ovK0g7jol_DXe6Sp07_r7mXolHCNrAy
 4. https://stackoverflow.com/questions/8697300/how-to-create-a-device-in-dev-automatically-upon-loading-of-the-kernel-module-f
+5. https://stackoverflow.com/questions/63448253/file-operation-in-drivers-and-struct-declaration
+6. https://lxr.linux.no/linux+v3.10/include/linux/fs.h#L1517
+7. https://www.baeldung.com/linux/kernel-module-read-write-files

@@ -11,16 +11,67 @@
 #include <linux/random.h>
 
 static int major;
+static int gameStarted = 0;
 static struct class *cl;
 
 ssize_t read_file(file *filep, char *buffer, size_t len, loff_t *offset) {
 	// Where we will read the file
 	fprintf(copy_to_user(buffer, filep, len));
+
+	// Change below to fprintf and check proj description
+	// again about error cases
+
+	// where we will write the file
+        if (buffer == "START"){
+                printk(copy_from_user(filep, "MISSING_PIECE", 13);
+                return;
+        }
+        string temp = &buffer;
+        char *word;
+        char *words[2];
+        int i = 0;
+        while ((word = strsep(&temp, " ")) != NULL && i < 2) {
+                words[i++] = word;
+        }
+        if (words[1] != "X" || words[1] != "O") {
+                printk(copy_from_user(filep, "INVALID_PIECE", 13);
+                return;
+        }
+        if (words[0] == "START" && gameStarted == 0){
+                printk(copy_from_user(filep, "GAME_STARTED", 12);
+                return;
+        }
+        else {
+                printk(copy_from_user(filep, buffer, len));
+                gameStarted = 1;
+        }
 }
 
 ssize_t write_file(file *filep, char *buffer, size_t len, loff_t *offset) {
 	// where we will write the file
-	printk(copy_from_user(filep, buffer, len));
+	if (buffer == "START"){
+		printk(copy_from_user(filep, "MISSING_PIECE", 13);
+		return;
+	}
+	string temp = &buffer;
+	char *word;
+	char *words[2];
+	int i = 0;
+	while ((word = strsep(&temp, " ")) != NULL && i < 2) {
+		words[i++] = word;
+	}
+	if (words[1] != "X" || words[1] != "O") {
+		printk(copy_from_user(filep, "INVALID_PIECE", 13);
+		return;
+	}
+	if (words[0] == "START" && gameStarted == 0){
+		printk(copy_from_user(filep, "GAME_STARTED", 12);
+		return;
+	}
+	else {
+		printk(copy_from_user(filep, buffer, len));
+		gameStarted = 1;
+	}
 }
 
 /**

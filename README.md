@@ -1,43 +1,38 @@
 ## Student Information
-- Name: your-name
-- Email: your-umbc-email
-- Student ID: student-id
-- Class Section: section-number
+- Name: Christian Wilkins
+- Email: cwilkin2@umbc.edu
+- Student ID: VA96371
+- Class Section: 04-LEC (1410)
 
 ## Project Description
-A high-level description of what this project does, and how it does it.
+This project is a kernel module that allows you to play tictactoe with a randomized bot algorithm. By compiling and loading the module into the kernel, the user can interact with the device by 
+using commands like "echo "PLAY 1,2" > /dev/tictactoe" and can complete a game of tictactoe with the bot. At any point the user can print the results of the board, error messages, and even reset the
+game. 
 
-## How to Configure, Compile, and Install the Custom Kernel
-1. step one
-2. step two
-3. step three
-... and so forth
-
-## How to Compile and Run the Proof-of-Concept Userspace Program
-1. step one
-2. step two
-3. step three
-... and so forth
-
-
-## How to Compile and Run the Testing Suite Userspace Program
-1. step one
-2. step two
-3. step three
-... and so forth
-
+## How to Configure, Compile, and Install the Custom Kernel Module
+1. Download code base
+2. Run "make"
+3. Run "sudo insmod kernelgame.ko"
+4. Run "su" and enter password
+5. Begin game by running "echo "START (X or O)" > /dev/tictactoe"
+6. Place first piece by running "echo "PLAY (X coordinate),(Y coordinate)" > /dev/tictactoe"
+7. Have Bot take turn by running "echo "BOT" > /dev/tictactoe"
+8. Print board by running "echo "BOARD" > /dev/tictactoe" and then "cat /dev/tictactoe"
+9. Take turns back and forth until board is full or someone has won
+10. You can see state of errors at any time by typing "cat /dev/tictactoe"
 
 ## Known Project Issues
-1. Issue One
-2. Issue Two
-3. Issue Three
-... and so forth
+1. None known, one potential issue is that I had inproperly set up my exit function and it somehow
+corrupted my git file. I just cloned the repo again and copied over the files and I was able to push to 
+github again. I do not expect that this would cause any further issues but I noted it here just in case.
 
 ## LLM/AI Prompts Used
-1. prompt 1: <how you used it>
-2. prompt 2: <how you used it>
-3. prompt 3: <how you used it>
-... and so forth
+1. See the attached error, for some reason my kernel module just started saying Killed, what is going on: Kernel randomly sayed killed for everything including ls, so I asked ChatGPT
+what was up so I could debug
+2. I am getting an error that my git object is corrupted, what does that mean?: Tried to push to github and it said my object file was corrupted and I wanted to know how to fix so I 
+could save my progress to github
+3. If I do git clone, will it delete my files if they are newer than the ones on the branch: I was trying to resolve the github issues and was concerned because my local project files were
+more updated than my ones on the remote branch, so I was concerned they would get overwritten and lose my progress.
 
 ## Sources Used
 1. https://tldp.org/LDP/lkmpg/2.6/html/x569.html

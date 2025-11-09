@@ -276,7 +276,7 @@ void play_cmd(char* buffer) {
 		return;
 	// Make sure the format is correct
 	} else if (!strstr(buffer, "PLAY ") || !(strstr(buffer, ","))) {
-		strcpy(error_msgs, "INVALID_FORMAT");
+		strcpy(error_msgs, "OUT_OF_BOUNDS");
                 return;
 	}
 
@@ -285,13 +285,13 @@ void play_cmd(char* buffer) {
 	x_string = strsep(&temp, ",");
 
 	if(kstrtol(x_string, 10, &x_coord) != 0) {
-		strcpy(error_msgs, "CANNOT_CONVERT");
+		strcpy(error_msgs, "OUT_OF_BOUNDS");
 		return;
 	};
 
 	// Temp is now ystring
 	if (kstrtol(temp, 10, &y_coord) != 0) {
-		strcpy(error_msgs, "CANNOT_CONVERT");
+		strcpy(error_msgs, "OUT_OF_BOUNDS");
 		return;
 	};
 

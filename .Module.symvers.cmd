@@ -1,1 +1,0 @@
-cmd_/usr/src/project-4/project4-fa25-Cawwilkins/Module.symvers := sed 's/ko$$/o/' /usr/src/project-4/project4-fa25-Cawwilkins/modules.order | scripts/mod/modpost -m    -o /usr/src/project-4/project4-fa25-Cawwilkins/Module.symvers -e -i Module.symvers   -T -

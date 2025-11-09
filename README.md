@@ -47,3 +47,5 @@ A high-level description of what this project does, and how it does it.
 5. https://stackoverflow.com/questions/63448253/file-operation-in-drivers-and-struct-declaration
 6. https://lxr.linux.no/linux+v3.10/include/linux/fs.h#L1517
 7. https://www.baeldung.com/linux/kernel-module-read-write-files
+8. https://www.kernel.org/doc/html/v4.12/core-api/kernel-api.html
+9. https://www.linuxquestions.org/questions/programming-9/random-numbers-kernel-642087/#google_vignette

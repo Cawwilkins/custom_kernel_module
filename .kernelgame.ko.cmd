@@ -1,1 +1,0 @@
-cmd_/usr/src/project-4/project4-fa25-Cawwilkins/kernelgame.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T arch/x86/module.lds -o /usr/src/project-4/project4-fa25-Cawwilkins/kernelgame.ko /usr/src/project-4/project4-fa25-Cawwilkins/kernelgame.o /usr/src/project-4/project4-fa25-Cawwilkins/kernelgame.mod.o;  true

@@ -1,8 +1,5 @@
-## Student Information
-- Name: Christian Wilkins
-- Email: cwilkin2@umbc.edu
-- Student ID: VA96371
-- Class Section: 04-LEC (1410)
+## INFO
+This was a project for one of my classes but I wanted to repurpose it for my portfolio
 
 ## Project Description
 This project is a kernel module that allows you to play tictactoe with a randomized bot algorithm. By compiling and loading the module into the kernel, the user can interact with the device by 

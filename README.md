@@ -34,10 +34,9 @@ more updated than my ones on the remote branch, so I was concerned they would ge
 ## Sources Used
 1. https://tldp.org/LDP/lkmpg/2.6/html/x569.html
 2. https://manpages.debian.org/testing/linux-manual-4.8/__class_create.9.en.html
-3. https://drive.google.com/drive/folders/12ovK0g7jol_DXe6Sp07_r7mXolHCNrAy
-4. https://stackoverflow.com/questions/8697300/how-to-create-a-device-in-dev-automatically-upon-loading-of-the-kernel-module-f
-5. https://stackoverflow.com/questions/63448253/file-operation-in-drivers-and-struct-declaration
-6. https://lxr.linux.no/linux+v3.10/include/linux/fs.h#L1517
-7. https://www.baeldung.com/linux/kernel-module-read-write-files
-8. https://www.kernel.org/doc/html/v4.12/core-api/kernel-api.html
-9. https://www.linuxquestions.org/questions/programming-9/random-numbers-kernel-642087/#google_vignette
+3. https://stackoverflow.com/questions/8697300/how-to-create-a-device-in-dev-automatically-upon-loading-of-the-kernel-module-f
+4. https://stackoverflow.com/questions/63448253/file-operation-in-drivers-and-struct-declaration
+5. https://lxr.linux.no/linux+v3.10/include/linux/fs.h#L1517
+6. https://www.baeldung.com/linux/kernel-module-read-write-files
+7. https://www.kernel.org/doc/html/v4.12/core-api/kernel-api.html
+8. https://www.linuxquestions.org/questions/programming-9/random-numbers-kernel-642087/#google_vignette
